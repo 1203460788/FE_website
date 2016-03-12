@@ -1,34 +1,30 @@
 ;(function(win){
   	var storageApp = {
         appPath:"/js/app/",
-		componentsPath:"./ngComponents",
-		directicesPath:"./ngDirectives",
-		filtersPath:"./ngFilters",
-		servicesPath:"./ngServices",
-		utilsPath:"./ngUtils"
+        jsPath:"/js/"
   	};
   	window.storageAppConfig = storageApp;
 })(window);
 
 require.config({
-  	baseUrl:"/js/",
+  	baseUrl:"/js/app/",
   	waitSeconds: 100,
   	paths: {
-  		"components":storageAppConfig.componentsPath,
-  		"directives":storageAppConfig.directicesPath,
-  		"filters":storageAppConfig.filtersPath,
-  		"services":storageAppConfig.servicesPath,
-  		"utils":storageAppConfig.utilsPath,
+  		"components":storageAppConfig.jsPath+"ngComponents",
+  		"directives":storageAppConfig.jsPath+"ngDirectives",
+  		"filters":storageAppConfig.jsPath+"ngFilters",
+  		"services":storageAppConfig.jsPath+"ngServices",
+  		"utils":storageAppConfig.jsPath+"ngUtils",
 
-		"libPath":"./libs",
-		"angularAMD": "./libs/angularAMD",
-		"ngload": "./libs/ngload",
-		"angular": "./libs/angular",
-		"angular-ui-router": "./libs/angular-ui-router",
-		"ui-router-extras-core": "./libs/ct-ui-router-extras.core",
-		"ui-router-extras-statevis": "./libs/ct-ui-router-extras.statevis",
-		"ui-router-extras-sticky": "./libs/ct-ui-router-extras.sticky",
-		"ui-router-extras-future": "./libs/ct-ui-router-extras.future"
+		"libPath":storageAppConfig.jsPath+"libs",
+		"angularAMD": storageAppConfig.jsPath+"libs/angularAMD",
+		"ngload": storageAppConfig.jsPath+"libs/ngload",
+		"angular": storageAppConfig.jsPath+"libs/angular",
+		"angular-ui-router": storageAppConfig.jsPath+"libs/angular-ui-router",
+		"ui-router-extras-core": storageAppConfig.jsPath+"libs/ct-ui-router-extras.core",
+		"ui-router-extras-statevis": storageAppConfig.jsPath+"libs/ct-ui-router-extras.statevis",
+		"ui-router-extras-sticky": storageAppConfig.jsPath+"libs/ct-ui-router-extras.sticky",
+		"ui-router-extras-future": storageAppConfig.jsPath+"libs/ct-ui-router-extras.future"
   	},
   	shim: {
 		"angular": { exports: "angular" },

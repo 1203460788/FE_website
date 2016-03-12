@@ -12,11 +12,14 @@ define(function(require){
                     basePath.vm+"vm.controller.js"
                 ],
                 views:{
-                    "header":{
+                    "":{
                         templateUrl:basePath.layout+"layout.html",
-                        controller:require("app/layout/layout")
                     },
-                    "content":{
+                    "header@vm":{
+                        templateUrl:basePath.layout+"header.html",
+                        controller:require("layout/layout")
+                    },
+                    "content@vm":{
                         templateUrl:basePath.vm+"vm.html",
                         controller:"vmCtrl"
                     }

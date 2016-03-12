@@ -12,11 +12,14 @@ define(function(require){
                     basePath.storage+"storage.controller.js"
                 ],
                 views:{
-                    "header":{
+                    "":{
                         templateUrl:basePath.layout+"layout.html",
-                        controller:require("app/layout/layout")
                     },
-                    "content":{
+                    "header@storage":{
+                        templateUrl:basePath.layout+"header.html",
+                        controller:require("layout/layout")
+                    },
+                    "content@storage":{
                         templateUrl:basePath.storage+"storage.html",
                         controller:"storageCtrl"
                     }

@@ -5,17 +5,10 @@
     <link href="/css/app.css" rel="stylesheet">
     <script type="text/javascript" src="/js/libs/d3.js" charset="utf-8"></script>
     <script type="text/javascript" src="/js/libs/lodash.js"></script>
-    <script type="text/javascript" data-main="/js/main.js" src="/js/libs/require.js"></script>
+    <script type="text/javascript" data-main="/js/app/main.js" src="/js/libs/require.js"></script>
 </head>
 
 <body>
-<div ui-view="header"></div>
-<div ui-view="content"></div>
-<div class="container">
-    <div class="col-sm-12">
-        <div width="300" height="300" state-vis></div>
-        <div class="content" ui-view></div>
-    </div>
-</div>
+<div ui-view></div>
 </body>
 </html>

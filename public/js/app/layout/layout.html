@@ -1,9 +1,2 @@
-<div class="navbar navbar-default navbar-static-top" role="navigation">
-    <ul class="nav navbar-nav">
-        <li ng-class="{active: $state.includes('vm')}" ><a href="#/vm">vm</a></li>
-        <li ng-class="{active: $state.includes('storage')}" ><a href="#/storage">storage</a></li>
-    </ul>
-    <div class="navbar-right">
-        <ul class="nav navbar-nav"><li><a target="_blank" href="https://github.com/christopherthielen/ui-router-extras/tree/gh-pages/example/future">Source code</a></li></ul>
-    </div>
-</div>
+<div ui-view="header"></div>
+<div ui-view="content"></div>
