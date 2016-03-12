@@ -1,0 +1,37 @@
+{
+  "name": "storage",
+  "version": "0.0.1",
+  "authors": [
+    "xulu3 <xulu3@lenovo.com>"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-bootstrap": "latest",
+    "bootstrap": "3.3.6",
+    "lodash": "latest",
+    "ui-router-extras": "latest",
+    "requirejs": "latest",
+    "angularAMD": "latest",
+    "d3": "latest"
+  },
+  "overrides": {
+    "ui-router-extras": {
+      "main": [
+        "release/ct-ui-router-extras.js",
+        "release/modular/ct-ui-router-extras.core.js",
+        "release/modular/ct-ui-router-extras.statevis.js",
+        "release/modular/ct-ui-router-extras.sticky.js",
+        "release/modular/ct-ui-router-extras.future.js"
+      ]
+    },
+    "angularAMD":{
+    	"main":[
+    		"angularAMD.js",
+    		"ngload.js"
+    	]
+    }
+  },
+  "description": "sotrage web app",
+  "license": "MIT"
+}
