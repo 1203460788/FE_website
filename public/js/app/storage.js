@@ -41,9 +41,9 @@ function (angularAMD) { // Only need to inject angularAMD for app config
   app.run(['$rootScope','$state',function ($rootScope, $state) {
     
     $rootScope.$state = $state;
-    $rootScope.$on("$locationChangeStart", function(evt) {
+    /*$rootScope.$on("$locationChangeStart", function(evt) {
       console.log(evt);
-    });
+    });*/
   }]);
   
   // Tell angularAMD to tell angular to bootstrap our app

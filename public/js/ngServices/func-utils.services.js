@@ -1,4 +1,4 @@
-define(['require','angular','services/app-utils.module'], function(require,ng,module){
+define(['services/app-utils.module'], function(module){
     
 
     module.factory('funcUtils',[function(){ 

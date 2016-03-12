@@ -20,6 +20,7 @@ require.config({
 		"angularAMD": storageAppConfig.jsPath+"libs/angularAMD",
 		"ngload": storageAppConfig.jsPath+"libs/ngload",
 		"angular": storageAppConfig.jsPath+"libs/angular",
+        "angular-bootstrap": storageAppConfig.jsPath+"libs/ui-bootstrap-tpls",
 		"angular-ui-router": storageAppConfig.jsPath+"libs/angular-ui-router",
 		"ui-router-extras-core": storageAppConfig.jsPath+"libs/ct-ui-router-extras.core",
 		"ui-router-extras-statevis": storageAppConfig.jsPath+"libs/ct-ui-router-extras.statevis",
@@ -28,6 +29,10 @@ require.config({
   	},
   	shim: {
 		"angular": { exports: "angular" },
+        "angular-bootstrap":{
+            deps:["angular"],
+            exports:"angular"
+        },
 		"angularAMD": ["angular"],
 		"ngload": ["angularAMD"],
 		"angular-ui-router": ["angular"],

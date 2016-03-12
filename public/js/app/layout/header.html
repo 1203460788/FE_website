@@ -1,9 +1,27 @@
-<div class="navbar navbar-default navbar-static-top" role="navigation">
-    <ul class="nav navbar-nav">
-        <li ng-class="{active: $state.includes('vm')}" ><a href="#/vm">vm</a></li>
-        <li ng-class="{active: $state.includes('storage')}" ><a href="#/storage">storage</a></li>
-    </ul>
-    <div class="navbar-right">
-        <ul class="nav navbar-nav"><li><a target="_blank" href="https://github.com/christopherthielen/ui-router-extras/tree/gh-pages/example/future">Source code</a></li></ul>
-    </div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">FE</a>
+        </div>
+        <div class="navbar-collapse collapse" role="navigation" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                <li class="hidden-xs" ng-repeat="navigator in vm.navigators" ng-class="{active: $state.current.name=='{{navigator.stateName}}'}">
+                    <a ui-sref='{{navigator["ui-sref"]}}' href="{{navigator.href}}">{{navigator.text}}</a>
+                </li>
+                <li>
+                    <i class="fa fa-fire job-hot"></i>
+                    <a href="#">前端高薪职位</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li><a href="/about/" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', 'about'])">关于</a></li>
+            </ul>
+        </div>
+      </div>
 </div>
