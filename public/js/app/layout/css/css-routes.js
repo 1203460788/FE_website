@@ -1,0 +1,42 @@
+define(function(require){
+    var basePath = {
+            css:AppConfig.appPath+'layout/css/',
+            layout:AppConfig.appPath+"layout/"
+        };
+
+    return {
+        routers:{
+            "css":{
+                url:"/css",
+                dependencies:[
+                    basePath.css+"css.controller.js"
+                ],
+                views:{
+                    "":{
+                        templateUrl:basePath.layout+"layout.html",
+                    },
+                    "header@css":{
+                        templateUrl:basePath.layout+"header.html",
+                        controller:require("layout/layout")
+                    },
+                    "content@css":{
+                        templateUrl:basePath.css+"css.html",
+                        controller:"cssCtrl"
+                    }
+                }
+            },
+            "css.detail":{
+                url:"/:type",
+                dependencies:[
+                    basePath.js+"css.controller.js"
+                ],
+                views:{
+                    "content@js":{
+                        templateUrl:basePath.css+"js.html",
+                        controller:"cssCtrl"
+                    }
+                }
+            }
+        }
+    }
+})

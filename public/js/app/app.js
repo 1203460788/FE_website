@@ -29,7 +29,7 @@ function (angularAMD) { // Only need to inject angularAMD for app config
     };
 
     //访问错误的url直接跳转到vm页面
-    $urlRouterProvider.otherwise("/storage");
+    $urlRouterProvider.otherwise("/js");
 
     $futureStateProvider.stateFactory('ngload', ngloadStateFactory); // register AngularAMD ngload state factory
     $futureStateProvider.stateFactory('iframe', iframeStateFactory); // register silly iframe state factory

@@ -1,16 +1,16 @@
 define(function(require,exports,module){
     module.exports = [
       {
-        "stateName": "vm",
-        "urlPrefix": "/vm",
+        "stateName": "css",
+        "urlPrefix": "/css",
         "type": "ngload",
-        "src": "/js/app/layout/vm/app-vm.module.js"
+        "src": "/js/app/layout/css/app-css.module.js"
       },
       {
-        "stateName": "storage",
-        "urlPrefix": "/storage",
+        "stateName": "js",
+        "urlPrefix": "/js",
         "type": "ngload",
-        "src": "/js/app/layout/storage/app-storage.module.js"
+        "src": "/js/app/layout/js/app-js.module.js"
       }
     ]
 })

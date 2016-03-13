@@ -9,6 +9,7 @@
     "angular-ui-router": "~0.2.15",
     "angular-bootstrap": "latest",
     "bootstrap": "3.3.6",
+    "angular-animate": "#1.4.4",
     "lodash": "latest",
     "ui-router-extras": "latest",
     "requirejs": "latest",

@@ -1,11 +1,35 @@
 <style type="text/css">
     .container-wrap{
-        padding-top: 50px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding:0;
+    }
+    .subNavigator{
+        position: absolute;
+        width: 169px;
+        top: 0;
+        bottom: 0;
+        background: #ddd;
+    }
+    .content{
+        position: absolute;
+        left: 169px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #eee;
     } 
 </style>
 <div ui-view="header"></div>
 
-<div class="container-wrap clearfix">
-    <div  class="col-lg-12" ui-view="content">
+<div class="container container-wrap">
+    <div class="clearfix">
+        <div class="subNavigator" ui-view="subnavigator">
+        </div>
+        <div class="content" ui-view="content">
+        </div>
     </div>
 </div>

@@ -1,35 +1,40 @@
 ;(function(win){
-  	var storageApp = {
+  	var AppConfig = {
         appPath:"/js/app/",
         jsPath:"/js/"
   	};
-  	window.storageAppConfig = storageApp;
+  	window.AppConfig = AppConfig;
 })(window);
 
 require.config({
   	baseUrl:"/js/app/",
   	waitSeconds: 100,
   	paths: {
-  		"components":storageAppConfig.jsPath+"ngComponents",
-  		"directives":storageAppConfig.jsPath+"ngDirectives",
-  		"filters":storageAppConfig.jsPath+"ngFilters",
-  		"services":storageAppConfig.jsPath+"ngServices",
-  		"utils":storageAppConfig.jsPath+"ngUtils",
+  		"components":AppConfig.jsPath+"ngComponents",
+  		"directives":AppConfig.jsPath+"ngDirectives",
+  		"filters":AppConfig.jsPath+"ngFilters",
+  		"services":AppConfig.jsPath+"ngServices",
+  		"utils":AppConfig.jsPath+"ngUtils",
 
-		"libPath":storageAppConfig.jsPath+"libs",
-		"angularAMD": storageAppConfig.jsPath+"libs/angularAMD",
-		"ngload": storageAppConfig.jsPath+"libs/ngload",
-		"angular": storageAppConfig.jsPath+"libs/angular",
-        "angular-bootstrap": storageAppConfig.jsPath+"libs/ui-bootstrap-tpls",
-		"angular-ui-router": storageAppConfig.jsPath+"libs/angular-ui-router",
-		"ui-router-extras-core": storageAppConfig.jsPath+"libs/ct-ui-router-extras.core",
-		"ui-router-extras-statevis": storageAppConfig.jsPath+"libs/ct-ui-router-extras.statevis",
-		"ui-router-extras-sticky": storageAppConfig.jsPath+"libs/ct-ui-router-extras.sticky",
-		"ui-router-extras-future": storageAppConfig.jsPath+"libs/ct-ui-router-extras.future"
+		"libPath":AppConfig.jsPath+"libs",
+		"angularAMD": AppConfig.jsPath+"libs/angularAMD",
+		"ngload": AppConfig.jsPath+"libs/ngload",
+		"angular": AppConfig.jsPath+"libs/angular",
+        "angular-animate": AppConfig.jsPath+"libs/angular-animate",
+        "angular-bootstrap": AppConfig.jsPath+"libs/ui-bootstrap-tpls",
+		"angular-ui-router": AppConfig.jsPath+"libs/angular-ui-router",
+		"ui-router-extras-core": AppConfig.jsPath+"libs/ct-ui-router-extras.core",
+		"ui-router-extras-statevis": AppConfig.jsPath+"libs/ct-ui-router-extras.statevis",
+		"ui-router-extras-sticky": AppConfig.jsPath+"libs/ct-ui-router-extras.sticky",
+		"ui-router-extras-future": AppConfig.jsPath+"libs/ct-ui-router-extras.future"
   	},
   	shim: {
 		"angular": { exports: "angular" },
         "angular-bootstrap":{
+            deps:["angular"],
+            exports:"angular"
+        },
+        "angular-animate":{
             deps:["angular"],
             exports:"angular"
         },
@@ -41,5 +46,5 @@ require.config({
 		"ui-router-extras-sticky": ["angular", "ui-router-extras-core"],
 		"ui-router-extras-future": ["angular", "ui-router-extras-core"]
   	},
-  	deps: ["storage"]
+  	deps: ["app"]
 });

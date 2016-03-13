@@ -1,0 +1,20 @@
+define([AppConfig.appPath+"layout/js/app-js.module.js"],function(module){
+    module.controller('jsSubNavigatorCtrl', ['$rootScope','$scope',function($scope,$rootScope){
+        $scope.jsNavigators=[{
+            name:"array",
+            href:"#/js/array",
+            text:"数组",
+            stateName:"array"
+        },{
+            name:"reg",
+            href:"#/js/reg",
+            text:"正则",
+            stateName:"reg"
+        },{
+            name:"str",
+            href:"#/js/str",
+            text:"字符串",
+            stateName:"str"
+        }]
+    }])
+})

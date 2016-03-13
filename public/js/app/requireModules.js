@@ -1,3 +1,3 @@
-define(["angular","utils/index","services/index","filters/index","services_module/services","angular-bootstrap"], function(ng) {
-    var requireModules=ng.module("requireModules",["app.utils","app.filters","app.services","ui.bootstrap"]);
+define(["angular","utils/index","services/index","filters/index","services/app-services.module","angular-animate"], function(ng) {
+    var requireModules=ng.module("requireModules",["app.utils","app.filters","app.services","ngAnimate"]);
 });
